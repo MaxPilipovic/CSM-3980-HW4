@@ -5,12 +5,12 @@ import java.util.function.IntPredicate;
 import java.util.stream.*;
 
 public class StreamAPI {
-    private static final int i = 1000;
+    private static final int i = 10000;
     private static final AtomicInteger test = new AtomicInteger(0); //Atomic Integer
 
     public static void main(String[] args) {
-        test.set(0);
-        sequentialStream();
+        //test.set(0);
+        //sequentialStream();
 
         test.set(0);
         parallelStreamAPI();

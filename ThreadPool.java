@@ -14,7 +14,7 @@ public class ThreadPool {
     private static AtomicInteger sharedCounter = new AtomicInteger(-i);
 
     public static void executeThreadPool(int model) {
-        final Stopwatch watch = new Stopwatch();
+        //final Stopwatch watch = new Stopwatch();
         // Build a pool of threads
         latch = new CountDownLatch(sizeOfPool);
         int tasks = 2 * i + 1; //Add 1 for 0
@@ -45,7 +45,7 @@ public class ThreadPool {
         // running even after main ends.
         service.shutdown();
         System.out.println("Thread Pool finished and value is " + test.get());
-        System.out.printf("Program took %f seconds\n", watch.elapsedTime());
+        //System.out.printf("Program took %f seconds\n", watch.elapsedTime());
     }
 
     private static class WorkerThread extends Thread {
@@ -119,6 +119,8 @@ public class ThreadPool {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Select Model 1 or 2");
         int model = scanner.nextInt();
+        final Stopwatch watch = new Stopwatch();
         executeThreadPool(model);
+        System.out.printf("Program took %f seconds\n", watch.elapsedTime());
     }
 }

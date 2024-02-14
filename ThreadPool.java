@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ThreadPool {
 
-    private static final int i = 10; //Range
+    private static final int i = 1000; //Range
     //private static final int numberOfJobs = 26;
     private static final int sizeOfPool = 6; //Number of threads in pool
     private static CountDownLatch latch;

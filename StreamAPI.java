@@ -5,7 +5,7 @@ import java.util.function.IntPredicate;
 import java.util.stream.*;
 
 public class StreamAPI {
-    private static final int i = 10;
+    private static final int i = 100;
     private static final AtomicInteger test = new AtomicInteger(0); //Atomic Integer
 
     public static void main(String[] args) {

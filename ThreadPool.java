@@ -8,7 +8,7 @@ public class ThreadPool {
 
     private static final int i = 1000; //Range
     //private static final int numberOfJobs = 26;
-    private static final int sizeOfPool = 12; //Number of threads in pool
+    private static final int sizeOfPool = 24; //Number of threads in pool
     private static CountDownLatch latch;
     private static AtomicInteger test = new AtomicInteger(0); //Atomic used for counter
     private static AtomicInteger sharedCounter = new AtomicInteger(-i);

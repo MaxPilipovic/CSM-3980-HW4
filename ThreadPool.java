@@ -85,6 +85,7 @@ public class ThreadPool {
                 latch.countDown();
             }
             //Dynamic assigning a value to threads
+            //here
             if (model == 2) {
                 int count = 0;
                 while (true) {

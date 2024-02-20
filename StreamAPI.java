@@ -5,7 +5,7 @@ import java.util.function.IntPredicate;
 import java.util.stream.*;
 
 public class StreamAPI {
-    private static final int i = 2870;
+    private static final int i = 1000;
     private static final AtomicInteger test = new AtomicInteger(0); //Atomic Integer
 
     public static void main(String[] args) {
@@ -65,6 +65,7 @@ public class StreamAPI {
 
     public static void parallelStreamAPI() {
         final Stopwatch watch = new Stopwatch();
+        //Stream<Integer> stream = .stream();
         IntStream.rangeClosed(-i, i).parallel().forEach(a -> {
             IntStream.rangeClosed(-i, i).parallel().forEach(b -> {
                 IntStream.rangeClosed(-i, i).parallel().forEach(c -> {
@@ -81,6 +82,7 @@ public class StreamAPI {
 
     public static void optimizedparallelStreamAPI() {
         final Stopwatch watch = new Stopwatch();
+        //check
         IntStream.rangeClosed(-i, i).parallel().forEach(a -> {
             for (int b = -i; b <= i; b++) {
                 for (int c = -i; c <= i; c++) {
